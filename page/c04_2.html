@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주소 등록</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <div class="popup-container addressWrap">
+        <h2>주소를 선택해주세요</h2>
+        <div class="input-group">
+            <input type="text" id="addressInput" placeholder="도로명, 지번, 건물명 검색">
+            <button onclick="searchAddress()">검색</button>
+        </div>
+        
+        <ul class="address-list">
+            <li>
+                <div>
+                    <div class="address">경기도 성남시 분당구 정자일로 1 (금곡동, 코오롱리플러스)</div>
+                    <div><span>지번</span>경기도 성남시 분당구 정자일로 210 코오롱트리플리스 1</div>
+                    <div><span>우편번호</span>13616</div>
+                </div>
+                <button onclick="openDetail()">선택</button>
+            </li>
+            <li>
+                <div>
+                    <div class="address">경기도 성남시 분당구 정자일로 1 (금곡동, 코오롱리플러스)</div>
+                    <div><span>지번</span>경기도 성남시 분당구 정자일로 210 코오롱트리플리스 1</div>
+                    <div><span>우편번호</span>13616</div>
+                </div>
+                <button onclick="openDetail()">선택</button>
+            </li>
+            <li>
+                <div>
+                    <div class="address">경기도 성남시 분당구 정자일로 1 (금곡동, 코오롱리플러스)</div>
+                    <div><span>지번</span>경기도 성남시 분당구 정자일로 210 코오롱트리플리스 1</div>
+                    <div><span>우편번호</span>13616</div>
+                </div>
+                <button onclick="openDetail()">선택</button>
+            </li>
+            <li>
+                <div>
+                    <div class="address">경기도 성남시 분당구 정자일로 1 (금곡동, 코오롱리플러스)</div>
+                    <div><span>지번</span>경기도 성남시 분당구 정자일로 210 코오롱트리플리스 1</div>
+                    <div><span>우편번호</span>13616</div>
+                </div>
+                <button onclick="openDetail()">선택</button>
+            </li>
+            <li>
+                <div>
+                    <div class="address">경기도 성남시 분당구 정자일로 1 (금곡동, 코오롱리플러스)</div>
+                    <div><span>지번</span>경기도 성남시 분당구 정자일로 210 코오롱트리플리스 1</div>
+                    <div><span>우편번호</span>13616</div>
+                </div>
+                <button onclick="openDetail()">선택</button>
+            </li>
+        </ul>
+        <div class="pagination">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>></button>
+        </div>
+    </div>
+
+    <script>
+        function searchAddress() {
+            const address = document.getElementById('addressInput').value;
+            if (address) {
+                alert(`검색된 주소: ${address}\n추가적인 주소 API 연동이 필요합니다.`);
+            } else {
+                alert('주소를 입력해주세요.');
+            }
+        }
+        function openDetail() {
+            alert('선택한 항목의 상세 정보를 확인하려면 추가 구현이 필요합니다.');
+        }
+    </script>
+</body>
+
+</html>

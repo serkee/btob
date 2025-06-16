@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>구매안전 서비스 안내 모달</title>
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+
+
+        .open-btn {
+            margin: 40px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+
+    <!-- 모달 열기 버튼 -->
+    <button class="open-btn" onclick="openModal()">구매안전 서비스 안내 보기</button>
+
+    <!-- 모달 팝업 -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <div class="modal-head">
+                <h2>구매안전 서비스 안내</h2>
+                <button class="modal-head-close" onclick="closeModal()">X</button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <button class="close-btn" onclick="closeModal()">닫기</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script>
+        openModal('구매안전 서비스 안내')
+    </script>
+
+</body>
+
+</html>

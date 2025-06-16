@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주소 등록</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <div class="popup-container addressWrap">
+        <h2>연락처를 입력해주세요.</h2>
+
+        <div class="title">
+            <label for="name">받는 이</label>
+        </div>
+
+        <div class="lineInput"><!-- error 클래스 추가시 에러메세지 노출됨 -->
+            <input type="text" id="name">
+            <span class="msg">다시 확인해주세요</span>
+        </div>
+
+        <div class="title">
+            <label for="phone">연락처</label>
+        </div>
+
+        <div class="lineInput error"><!-- error 클래스 추가시 에러메세지 노출됨 -->
+            <input type="text" id="phone">
+            <span class="msg">다시 확인해주세요</span>
+        </div>
+
+        <div class="title">
+            <label for="addressInput">주소</label>
+            <button class="btn" onclick="searchAddress()">주소검색</button>
+        </div>
+
+        <div class="order-info">
+            <div>경기도 성남시 분당구 정자일로 1 (금곡동, 코오롱트리플리스)</div>
+            <div>(13616)</div>
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="addressInput" placeholder="상세주소는 도로명 주소에 맞게 입력해주세요">
+        </div>
+        <button class="btn big w100">저장하기</button>
+        
+    </div>
+
+    <script>
+        function searchAddress() {
+            const address = document.getElementById('addressInput').value;
+            if (address) {
+                alert(`검색된 주소: ${address}\n추가적인 주소 API 연동이 필요합니다.`);
+            } else {
+                alert('주소를 입력해주세요.');
+            }
+        }
+        function openDetail() {
+            alert('선택한 항목의 상세 정보를 확인하려면 추가 구현이 필요합니다.');
+        }
+    </script>
+</body>
+
+</html>

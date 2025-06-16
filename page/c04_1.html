@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주소 등록</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <div class="popup-container addressWrap">
+        <h2>주소를 검색해주세요</h2>
+        <div class="input-group">
+            <input type="text" id="addressInput" placeholder="도로명, 지번, 건물명 검색">
+            <button onclick="searchAddress()">검색</button>
+        </div>
+        
+        <div class="payment-info">
+            <h3>예상 결제 금액</h3>
+            <ul>
+                <li>· 도로명 + 건물번호: 예) 정자일로 95, 롤젠로 6</li>
+                <li>· 동/읍/면/리 + 번지: 예) 정자동 178-4, 동면 만천리 1000</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function searchAddress() {
+            const address = document.getElementById('addressInput').value;
+            if (address) {
+                alert(`검색된 주소: ${address}\n추가적인 주소 API 연동이 필요합니다.`);
+            } else {
+                alert('주소를 입력해주세요.');
+            }
+        }
+    </script>
+</body>
+
+</html>

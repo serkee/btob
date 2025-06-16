@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naver Cube Store</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="inner">
+            <div class="top-bar">
+                <div class="left">
+                    <span class="naver-logo">NAVER</span>
+                    <span class="pay-logo">네이버페이</span>
+                </div>
+                <div class="right">
+                    <span class="user">serkee ▼</span>
+                    <span class="icon">💬</span>
+                    <span class="icon">🔔</span>
+                    <span class="icon mail">✉️<span class="badge green">99+</span></span>
+                    <span class="icon">▦</span>
+                </div>
+            </div>
+
+            <div class="middle-bar">
+                <div class="logo-area">
+                    <img src="naverstore-logo.png" alt="N스토어 로고" class="store-logo" />
+                </div>
+                <div class="search-area">
+                    <input type="text" class="search-input" placeholder="상품명 또는 브랜드 입력" />
+                    <button class="search-btn">🔍</button>
+                </div>
+                <div class="menu-icons">
+                    <div class="menu-item">카테고리</div>
+                    <div class="menu-item">마이쇼핑</div>
+                    <div class="menu-item cart">장바구니 <span class="badge red">30</span></div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="inner">
+            <div class="order-summary">
+                <div class="title">
+                    <label for="addressInput">주소</label>
+                    <button class="btn" onclick="searchAddress()">주소검색</button>
+                </div>
+        
+                <div class="order-info">
+                    <div>010-1234-1234</div>
+                    <div class="address">경기도 성남시 분당구 정자일로 1 (금곡동, 코오롱트리플리스)</div>
+                    <div>(13616)</div>
+                    <select>
+                        <option value="">선택안함</option>
+                        <option value="">1</option>
+                    </select>
+                </div>
+                <div class="order-details">
+                    <div class="order-item">
+                        <span>주문 상품 2건</span>
+                        <div class="order-list">
+                            <div class="product">
+                                <img src="https://via.placeholder.com/80x80?text=IMG" alt="상품 이미지">
+                                <span>상품명 X 2개</span>
+                                <span class="price">5,000원</span>
+                            </div>
+                            <div class="product">
+                                <img src="https://via.placeholder.com/80x80?text=IMG" alt="상품 이미지">
+                                <span>상품명 X 1개</span>
+                                <span class="price">2,500원</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-item">
+                        <span>배송비</span>
+                        <span class="price">2,500원</span>
+                    </div>
+                    <div class="order-item total">
+                        <span>총주문금액</span>
+                        <span class="price">10,000원</span>
+                    </div>
+                </div>
+                <div class="agreement-section">
+                    <h3>약관 동의</h3>
+                    <p>전자금융거래 이용약관 및 결제대행 서비스 제공에 동의하셔야 결제가 가능합니다.</p>
+                    <div class="agreement-options">
+                        <label class="agreement-item required">
+                            <input type="checkbox" name="agreement" required>
+                            <span>[필수] 전자금융거래 이용약관 동의</span>
+                            <a href="javascript:void(0)" class="view-detail" onclick="openModal('전자금융거래 이용약관')">자세히</a>
+                        </label>
+                        <label class="agreement-item required">
+                            <input type="checkbox" name="agreement" required>
+                            <span>[필수] 결제대행 서비스 제공 동의</span>
+                            <a href="javascript:void(0)" class="view-detail" onclick="openModal('결제대행 서비스 제공 동의')">자세히</a>
+                        </label>
+                        <label class="agreement-item optional">
+                            <input type="checkbox" name="agreement">
+                            <span>[선택] 개인정보 제3자 제공 동의</span>
+                            <a href="javascript:void(0)" class="view-detail" onclick="openModal('개인정보 제3자 제공 동의')">자세히</a>
+                        </label>
+                        <label class="agreement-item optional">
+                            <input type="checkbox" name="agreement">
+                            <span>[선택] 마케팅 정보 수신 동의 (SMS/이메일)</span>
+                            <a href="javascript:void(0)" class="view-detail" onclick="openModal('마케팅 정보 수신 동의')">자세히</a>
+                        </label>
+                    </div>
+                    <button class="btn primary" disabled>결제하기</button>
+                </div>
+            </div>
+            <!-- //order-summary -->
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="inner">
+            <div class="footer-desc">
+                <p>네이버(주)는 통신판매중개자이며, 통신판매의 당사자가 아닙니다. 상품, 상품정보, 거래에 관한 의무와 책임은 판매자에게 있습니다.</p>
+                <p>사업자등록번호 : 220-81-62517 | 통신판매업신고번호 : 제2006-경기성남-0692호 | 대표이사 : 최수연 | 사업자등록정보확인 | 이메일 :
+                    helpcustomer@naver.com</p>
+                <p>주소 : 경기도 성남시 분당구 정자일로 95, NAVER 1784, 13561 | <strong>1:1 문의 바로가기</strong> | 호스팅 서비스 제공 : NAVER Cloud
+                </p>
+                <p>쇼핑&페이 고객센터 대표전화 1588-3819 | 네이버 대표전화 1588-3820 | 네이버플러스 멤버십 전용 고객센터 1599-1399</p>
+            </div>
+
+            <div class="footer-copy">
+                <strong class="naver-logo">NAVER</strong> Copyright ⓒ <strong>NAVER Corp.</strong> All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- 모달 팝업 -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <div class="modal-head">
+                <h2>구매안전 서비스 안내</h2>
+                <button class="modal-head-close" onclick="closeModal()">X</button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <button class="close-btn" onclick="closeModal()">닫기</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../js/script.js"></script>
+    <script>
+        function addressAdd(){
+            window.open('c04_1.html', 'AddressPopup', 'width=450,height=500');
+        }
+    </script>
+</body>
+
+</html>
